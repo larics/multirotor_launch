@@ -1,0 +1,15 @@
+<launch>
+
+	<arg name="port" default="USB0" />
+	<arg name="baudrate" default="921600" />
+	
+	<!-- Launch runtime monitor - for testing -->
+	<node pkg="rqt_runtime_monitor" type="rqt_runtime_monitor" name="uav_monitor"/>
+
+	<!-- Launch MAVROS - Ardupilot -->
+	<include file="$(find mavros)/launch/apm2.launch">
+		<arg name="fcu_url" value="/dev/tty$(arg port):$(arg baudrate)" />
+	</include>
+	
+	
+</launch>
