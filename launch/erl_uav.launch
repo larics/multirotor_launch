@@ -1,12 +1,9 @@
 <launch>
 	
-	<arg name="namespace" default="erl_uav" />
+	<arg name="namespace" default="/" />
 	<arg name="port" default="USB0" />
 	<arg name="baudrate" default="921600" />
 	
-	<!-- Launch runtime monitor - for testing -->
-	<node pkg="rqt_runtime_monitor" type="rqt_runtime_monitor" name="uav_monitor"/>
-
 	<!-- ERL - UAV namespace -->
 	<group ns="$(arg namespace)">
 		
