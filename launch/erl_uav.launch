@@ -5,14 +5,16 @@
 	<arg name="baudrate" default="921600" />
 	
 	<!-- ERL - UAV namespace -->
+	
+	<!-- 
 	<group ns="$(arg namespace)">
 		
-		<!-- Launch MAVROS - Ardupilot -->
 		<include file="$(find mavros)/launch/apm2.launch">
 			<arg name="fcu_url" value="/dev/tty$(arg port):$(arg baudrate)" />
 		</include>
 		
 	</group>
+	-->
 	
 	<!-- Linear MPC -->
 	<include file="$(find mav_linear_mpc)/launch/ardupilot_erl_linear_mpc.launch">
@@ -25,7 +27,7 @@
 	</include>
 	
 	<!-- Optitrack pose sensor -->
-	<include file="$(find msf_updates)/launch/optitrack_pose_sensor.launch">
+	<include file="$(find msf_updates)/launch/erl_position_sensor.launch">
 		<arg name="namespace" value="$(arg namespace)" />
 	</include>
 	
