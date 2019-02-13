@@ -27,6 +27,14 @@
 	</include>
 	
 	<!-- Optitrack pose sensor -->
-	<include file="$(find msf_updates)/launch/erl_position_sensor.launch" />
+	<include file="$(find msf_updates)/launch/erl_pose_sensor.launch" >
+		<arg name="imu_topic" value="/mavros/imu/data_raw" />
+		<arg name="position_topic" value="/eaglered/position" />
+	</include>
+	
+	<!-- From cartographer to MSF core -->
+	<node name="map2transform" pkg="erl_drone" type="map2transform" output="screen" >
+		<rempap from="eaglered/position" to="eaglered/position" />
+	</node>
 	
 </launch>
