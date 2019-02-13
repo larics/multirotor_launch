@@ -27,8 +27,6 @@
 	</include>
 	
 	<!-- Optitrack pose sensor -->
-	<include file="$(find msf_updates)/launch/erl_position_sensor.launch">
-		<arg name="namespace" value="$(arg namespace)" />
-	</include>
+	<include file="$(find msf_updates)/launch/erl_position_sensor.launch" />
 	
 </launch>
