@@ -38,7 +38,7 @@
 	</node>
 
 	<!-- RC override launch -->
-	<include file="$(find multirotor_transformations)/launch/rc_override.launhc" >
+	<include file="$(find multirotor_transformations)/launch/rc_override.launch" >
 		<arg name="override_index" default="6"/>
 		<arg name="override_value" default="1500"/>
 	</include>
