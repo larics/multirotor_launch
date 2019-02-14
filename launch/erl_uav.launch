@@ -47,6 +47,6 @@
 	<include file="$(find erl_drone)/launch/cameras.launch"/>
 	
 	<!-- Launch multimaster -->
-	<!-- <include file="$(find erl_drone)/launch/multimaster.launch" /> -->
+	<include file="$(find erl_drone)/launch/multimaster.launch" />
 	
 </launch>
