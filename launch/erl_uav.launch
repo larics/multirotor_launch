@@ -36,5 +36,11 @@
 	<node name="map2transform" pkg="erl_drone" type="map2transform" output="screen" >
 		<rempap from="eaglered/position" to="eaglered/position" />
 	</node>
+
+	<!-- RC override launch -->
+	<include file="$(find multirotor_transformations)/launch/rc_override.launhc" >
+		<arg name="override_index" default="6"/>
+		<arg name="override_value" default="1500"/>
+	</include>
 	
 </launch>
