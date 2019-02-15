@@ -1,4 +1,4 @@
-<launch>
+q<launch>
 	
 	<arg name="namespace" default="/" />
 	<arg name="port" default="USB0" />
@@ -28,7 +28,7 @@
 	
 	<!-- Optitrack pose sensor -->
 	<include file="$(find msf_updates)/launch/erl_pose_sensor.launch" >
-		<arg name="imu_topic" value="/mavros/imu/data" />
+		<arg name="imu_topic" value="/mavros/imu/data_raw" />
 		<arg name="position_topic" value="/eaglered/position" />
 	</include>
 	
